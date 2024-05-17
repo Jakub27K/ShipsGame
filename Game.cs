@@ -1,4 +1,4 @@
-﻿using System.Data.Common;
+using System.Data.Common;
 using System.Numerics;
 
 namespace ShipsGame
@@ -339,6 +339,9 @@ namespace ShipsGame
         }
         public void Shooting()
         {
+            Console.WriteLine("To jest twoja plansza.");
+            nowPlayer.boardForShips.ShowBoard();
+            Console.WriteLine("Plansza do strzelania.");
             nowPlayer.boardForShooting.ShowBoard();
             int[] field = GetPlayerField(false);
             if (secondaryPlayer.boardForShips.board[field[0], field[1]] == 's')
